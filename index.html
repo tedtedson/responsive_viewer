@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Breakpoint Viewer</title>
+	
+	<link rel="stylesheet" type="text/css" media="screen, projection" href="css/view_manager.css">
+	
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ba-bbq.min.js"></script>
+	<script type="text/javascript" src="js/dev_utils.js"></script>
+	<script type="text/javascript" src="js/view_manager.js"></script>
+</head>
+<body>
+	<div class="view-manager">
+		<div class="view-controls">
+			<div><img src="images/logo_sp.png"></div>
+			
+			<div class="ctrl-group">
+				<div>View:</div>
+				
+				<a class="icon-btn v480x320" data-view="480x270" title="480x270 (iPhone landscape)"></a>
+				<a class="icon-btn v320x480" data-view="320x420" title="320x420 (iPhone portrait)"></a>
+				<!-- <a class="icon-btn v600x1024" data-view="600x1024" title="600x1024 (Playbook)"></a> -->
+				<a class="icon-btn v1024x768 selected" data-view="1024x668" title="1024x668 (iPad landscape)"></a>
+				<a class="icon-btn v768x1024" data-view="768x924" title="768x924 (iPad portrait)"></a>
+				<a class="icon-btn v1024x768b" data-view="1024x768" title="1024x768 (Computer)"></a>
+				<a class="icon-btn v1280x1024" data-view="1280x1024" title="1280x1024 (Computer)"></a>
+				<a class="icon-btn v1440x900" data-view="1440x900" title="1440x900 (Mac)"></a>
+				<a class="icon-btn maximize" data-view="max" title="Maximize/minimize viewport"></a>
+			</div>
+			
+			<div class="ctrl-group">
+				<div>Page:</div>
+				<div>
+					<!-- <select class="page-select">
+					
+					</select> -->
+					
+					<input type="text" class="page-input">
+				</div>
+				<div class="icon-btn reload"></div>
+				<div class="icon-btn new-window"></div>
+			</div>
+		</div>
+		
+		
+		<table class="view-wrapper v-1024x668">
+			<tbody>
+				<tr>
+					<td>
+						<div class="view-stand">
+							<div id="view-holder">
+								<div class="view-border">
+									<iframe src="" align="center" class="view-frame" frameborder="0">
+									</iframe>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

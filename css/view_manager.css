@@ -1,0 +1,357 @@
+body {
+	background-color: #FFF;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	margin: 0;
+}
+
+/*.view-controls a {
+	color: #FFF;
+}*/
+
+::-webkit-scrollbar{
+	width:0;
+	height:0;
+}
+
+html,
+body,
+.view-manager {
+	background-color: #222;
+	height: 100%;
+}
+
+.view-manager {
+	background: #161819;
+	background: -moz-linear-gradient(top,  #161819 0%, #2d3033 36%, #080b0c 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#161819), color-stop(36%,#2d3033), color-stop(100%,#080b0c));
+	background: -webkit-linear-gradient(top,  #161819 0%,#2d3033 36%,#080b0c 100%);
+	background: -o-linear-gradient(top,  #161819 0%,#2d3033 36%,#080b0c 100%);
+	background: -ms-linear-gradient(top,  #161819 0%,#2d3033 36%,#080b0c 100%);
+	background: linear-gradient(to bottom,  #161819 0%,#2d3033 36%,#080b0c 100%);
+}
+.view-manager .icon-btn {
+	opacity: .5;
+	filter: alpha(opacity=50);
+	cursor: pointer;
+	
+	display: inline-block;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-image: url("sprites/viewer_icons_row.png");
+	width: 50px;
+	height: 40px;
+}
+.view-manager .icon-btn.selected {
+	cursor: default;
+}
+.view-manager .icon-btn.v480x320 {
+	background-position: 0 center;
+	width: 40px;
+}
+.view-manager .icon-btn.v320x480 {
+	background-position: -53px center;
+	width: 44px;
+}
+.view-manager .icon-btn.v1024x768 {
+	background-position: -100px center;	
+}
+.view-manager .icon-btn.v600x1024 {
+	background-position: -509px center;
+	width: 40px;	
+}
+.view-manager .icon-btn.v768x1024 {
+	background-position: -150px center;	
+}
+.view-manager .icon-btn.v1024x768b {
+	background-position: -197px center;	
+	width: 56px;
+}
+.view-manager .icon-btn.v1280x1024 {
+	background-position: -448px center;
+	width: 56px;
+}
+.view-manager .icon-btn.v1440x900 {
+	background-position: -448px center;
+	width: 56px;
+}
+.view-manager .icon-btn.maximize {
+	background-position: -254px center;	
+	width: 44px;
+}
+.view-manager .icon-btn.maximize.selected {
+	background-position: -304px center;
+	cursor: pointer;
+}
+.view-manager .icon-btn.reload {
+	background-position: -354px center;	
+	width: 44px;
+}
+.view-manager .icon-btn.new-window {
+	background-position: -404px center;	
+	width: 44px;
+}
+.view-manager .icon-btn.selected,
+.view-manager .icon-btn:hover,
+.view-manager .icon-btn:active {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.view-controls {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	font-size: 14px;
+	width: 100%;
+	background-color: #FFF;
+	color: #555;
+	border-bottom: 1px solid #333;
+	/*-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	padding: 3px;*/
+	padding: 10px;
+}
+.view-controls div {
+	display: inline-block;
+	vertical-align: middle;
+/*	margin-right: 10px;*/
+}
+.view-controls select {
+	max-width: 150px;
+}
+.ctrl-group {
+	border-left: 1px solid #EBEBEB;
+	margin-left: 25px;
+	padding-left: 25px;
+}
+.view-wrapper {
+	border-collapse: collapse;
+	height: 100%;
+	width: 100%;
+}
+.view-wrapper td {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+#view-holder {
+/*	margin: 0 auto;*/
+	text-align: center;
+	border: 1px solid #555;
+	display: inline-block;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	background-color: #000;
+	background-repeat: no-repeat;
+}
+.v-1024x768 .view-stand {
+	background-repeat: no-repeat;
+	background-image: url("sprites/1024x768b.png");
+	background-position: center bottom;
+	padding-bottom: 70px;
+}
+.v-1024x768 #view-holder {
+	padding: 50px;
+}
+.v-1280x1024 .view-stand {
+	background-repeat: no-repeat;
+	background-image: url("sprites/1024x768b.png");
+	background-position: center bottom;
+	padding-bottom: 70px;
+}
+.v-1280x1024 #view-holder {
+	padding: 50px;
+}
+.v-1440x900 .view-stand {
+	background-repeat: no-repeat;
+	background-image: url("sprites/1024x768b.png");
+	background-position: center bottom;
+	padding-bottom: 70px;
+}
+.v-1440x900 #view-holder {
+	padding: 50px;
+}
+/*.v-768x102 #view-holder4,*/
+.v-1024x668 #view-holder,
+.v-768x924 #view-holder,
+.v-480x270 #view-holder,
+.v-320x420 #view-holder {
+	background-image: url("sprites/device_button.png");
+	padding: 50px;
+}
+.v-600x1024 #view-holder {
+	padding: 60px;
+}
+.v-320x420 #view-holder {
+	padding: 65px 5px;
+	background-position: center 555px;
+}
+.v-480x270 #view-holder {
+	padding: 5px 65px;
+	background-position: 10px center;
+}
+.v-1440x900 #view-holder,
+.v-1280x1024 #view-holder,
+.v-1024x668 #view-holder,
+.v-1024x768 #view-holder {
+	background-position: left center;
+}
+.v-768x924 #view-holder,
+.v-768x1024 #view-holder,
+.v-600x1024 #view-holder {
+	background-position: center bottom;
+}
+.v-max.view-wrapper {
+	position: fixed;
+	top: 61px;
+	bottom: 0;
+}
+.v-max.view-wrapper,
+.v-max.view-wrapper tbody,
+.v-max.view-wrapper tr,
+.v-max.view-wrapper td,
+.v-max .view-stand,
+.v-max #view-holder,
+.v-max .view-border,
+.v-max .view-border iframe {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border: none;
+	
+}
+.view-chrome {
+	display: none;
+	background: #cccccc;
+	background: -moz-linear-gradient(top,  #cccccc 0%, #bbbbbb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#bbbbbb));
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#bbbbbb 100%);
+	background: -o-linear-gradient(top,  #cccccc 0%,#bbbbbb 100%);
+	background: -ms-linear-gradient(top,  #cccccc 0%,#bbbbbb 100%);
+	background: linear-gradient(to bottom,  #cccccc 0%,#bbbbbb 100%);
+}
+.test {
+	background: rgb(243,243,245);
+	background: -moz-linear-gradient(top,  rgb(243,243,245) 0%, rgb(202,204,212) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(243,243,245)), color-stop(100%,rgb(202,204,212)));
+	background: -webkit-linear-gradient(top,  rgb(243,243,245) 0%,rgb(202,204,212) 100%);
+	background: -o-linear-gradient(top,  rgb(243,243,245) 0%,rgb(202,204,212) 100%);
+	background: -ms-linear-gradient(top,  rgb(243,243,245) 0%,rgb(202,204,212) 100%);
+	background: linear-gradient(to bottom,  rgb(243,243,245) 0%,rgb(202,204,212) 100%);
+}
+.view-border {
+	background-color: #FFF;
+	border: 1px solid #333;
+	display: block;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.v-1440x900 .view-border {
+	padding-top: 94px;
+	padding-bottom: 78px;
+	background-image: url("sprites/1440x900.png");
+}
+.v-1280x1024 .view-border {
+	padding-top: 77px;
+	padding-bottom: 41px;
+	background-image: url("sprites/1280x1024.png");
+}
+.v-1024x668 .view-border {
+	padding-top: 96px;
+	background-image: url("sprites/1024x668.png");
+}
+.v-1024x768 .view-border {
+	padding: 77px 0 39px 0;
+	background-image: url("sprites/1024x768.png");
+}
+.v-768x924 .view-border {
+	padding-top: 96px;
+	background-image: url("sprites/768x1024.png");
+}
+.v-320x420 .view-border {
+	padding: 20px 0 40px 0;
+	background-image: url("sprites/320x480.png");
+}
+.v-480x270 .view-border {
+	padding: 20px 0 30px 0;
+	background-image: url("sprites/480x320.png");
+}
+.v-1024x668 .view-chrome.top,
+.v-768x924 .view-chrome.top {
+	height: 100px;
+	display: block;
+	border-bottom: 1px solid #333;
+}
+.view-frame {
+	margin: 0 auto;
+	border: none;
+	overflow-x: hidden;
+	background-color: #FFF;
+	background-position: center center; 
+	background-repeat: no-repeat;
+}
+.view-frame.loading {
+	background-image: url('sprites/ajax_loader_000_on_FFF.gif');
+}
+/*.v-320x480 .view-frame {
+	width: 320px;
+	height: 480px;
+}*/
+.v-320x420 .view-frame {
+	width: 320px;
+	height: 420px;
+}
+/*.v-360x520 .view-frame {
+	width: 360px;
+	height: 520px;
+}*/
+/*.v-480x320 .view-frame {
+	width: 480px;
+	height: 320px;
+}*/
+.v-480x270 .view-frame {
+	width: 480px;
+	height: 270px;
+}
+.v-480x800 .view-frame {
+	width: 480px;
+	height: 800px;
+}
+.v-600x1024 .view-frame {
+	width: 600px;
+	height: 1024px;
+}
+.v-768x1024 .view-frame {
+	width: 768px;
+	height: 1024px;
+}
+.v-768x924 .view-frame {
+	width: 768px;
+	height: 924px;
+}
+.v-1024x668 .view-frame {
+	width: 1024px;
+	height: 668px;
+}
+.v-1024x768 .view-frame {
+	width: 1024px;
+	height: 652px;
+}
+.v-1280x1024 .view-frame {
+	width: 1280px;
+	height: 906px;
+}
+.v-1440x900 .view-frame {
+	width: 1440px;
+	height: 720px;
+}
+/*
+.v-1920x1080 .view-frame {
+	width: 1920px;
+	height: 1080px;
+}*/
